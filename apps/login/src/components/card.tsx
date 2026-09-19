@@ -56,6 +56,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={clsx(
+          "mdl-card",
           actualBackground,
           actualCardStyling,
           actualPadding,

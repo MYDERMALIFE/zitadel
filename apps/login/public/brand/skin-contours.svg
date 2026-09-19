@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">MyDermaLife living-skin material</title>
+  <desc id="desc">An abstract layered composition inspired by the continuity and structure of living skin.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#32180f"/>
+      <stop offset="0.55" stop-color="#7a321d"/>
+      <stop offset="1" stop-color="#b85c34"/>
+    </linearGradient>
+    <linearGradient id="layer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f1c8ad" stop-opacity="0.12"/>
+      <stop offset="0.48" stop-color="#ffd9c0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#d88d65" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#field)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M-120 195C125 38 330 312 555 174S927 38 1320 214" stroke="#f6ddca" stroke-opacity="0.28" stroke-width="20"/>
+    <path d="M-104 271C159 118 342 391 600 246S976 121 1312 301" stroke="#f7cdb4" stroke-opacity="0.22" stroke-width="10"/>
+    <path d="M-82 350C170 207 408 493 674 326S1010 219 1294 389" stroke="url(#layer)" stroke-width="64"/>
+    <path d="M-92 438C144 314 390 584 705 422S1032 310 1302 476" stroke="#f9d3ba" stroke-opacity="0.34" stroke-width="13"/>
+    <path d="M-110 527C186 382 402 696 742 509S1050 407 1300 548" stroke="#ffe5d2" stroke-opacity="0.18" stroke-width="8"/>
+    <path d="M-116 650C136 491 445 786 783 613S1079 506 1310 665" stroke="url(#layer)" stroke-width="78"/>
+    <path d="M-88 758C164 584 486 901 824 714S1092 616 1296 773" stroke="#f8c9ab" stroke-opacity="0.31" stroke-width="12"/>
+    <path d="M-90 892C217 690 521 1034 858 833S1102 742 1304 912" stroke="#ffe1ca" stroke-opacity="0.19" stroke-width="7"/>
+    <path d="M-70 1029C233 832 582 1148 902 963S1128 885 1290 1035" stroke="#f9cfb5" stroke-opacity="0.26" stroke-width="17"/>
+  </g>
+  <g fill="#f7d7c2" fill-opacity="0.22" stroke="#ffe8d8" stroke-opacity="0.22">
+    <circle cx="713" cy="360" r="28"/><circle cx="775" cy="337" r="15"/><circle cx="817" cy="381" r="23"/>
+    <circle cx="863" cy="345" r="12"/><circle cx="910" cy="392" r="31"/><circle cx="967" cy="358" r="18"/>
+    <circle cx="621" cy="567" r="17"/><circle cx="671" cy="551" r="26"/><circle cx="724" cy="584" r="13"/>
+    <circle cx="766" cy="548" r="20"/><circle cx="824" cy="581" r="29"/><circle cx="882" cy="545" r="14"/>
+    <circle cx="944" cy="589" r="24"/><circle cx="1000" cy="553" r="11"/>
+    <circle cx="503" cy="790" r="21"/><circle cx="561" cy="766" r="13"/><circle cx="608" cy="809" r="27"/>
+    <circle cx="666" cy="778" r="18"/><circle cx="719" cy="820" r="11"/><circle cx="765" cy="784" r="25"/>
+  </g>
+  <path d="M1041 53C948 178 906 298 921 413c13 96 68 178 54 302-13 116-81 226-64 432" fill="none" stroke="#fff1e6" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="921" cy="413" r="9" fill="none" stroke="#fff7ef" stroke-opacity="0.8" stroke-width="2"/>
+</svg>

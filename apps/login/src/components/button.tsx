@@ -86,7 +86,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         type="button"
         ref={ref}
-        className={`${getButtonClasses(size, variant, color, actualRoundness, actualAppearance)} ${className}`}
+        data-variant={variant.toLowerCase()}
+        className={`mdl-button ${getButtonClasses(size, variant, color, actualRoundness, actualAppearance)} ${className}`}
         {...props}
       >
         {children}

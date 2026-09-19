@@ -32,7 +32,11 @@ export function isSessionPrimaryFactorAndLifetimeValid(session: Partial<Session>
   return { valid, verifiedAt };
 }
 
-export function SessionItem({ session, reload, requestId }: { session: Session; reload: () => void; requestId?: string }) {
+export function SessionItem({
+  session,
+  reload,
+  requestId,
+}: Readonly<{ session: Session; reload: () => void; requestId?: string }>) {
   const currentLocale = useLocale();
   moment.locale(currentLocale === "zh" ? "zh-cn" : currentLocale);
   const t = useTranslations("error");
@@ -101,7 +105,7 @@ export function SessionItem({ session, reload, requestId }: { session: Session; 
                 }
               }
             }}
-            className="group border-divider-light bg-background-light-400 dark:bg-background-dark-400 flex flex-row items-center rounded-md border px-4 py-2 transition-all hover:shadow-lg dark:hover:bg-white/10"
+            className="mdl-session-item group border-divider-light bg-background-light-400 dark:bg-background-dark-400 flex flex-row items-center rounded-md border px-4 py-2 transition-all hover:shadow-lg dark:hover:bg-white/10"
           >
             <div className="pr-4">
               <Avatar

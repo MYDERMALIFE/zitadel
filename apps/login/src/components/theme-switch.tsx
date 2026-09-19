@@ -57,23 +57,23 @@ export default function ThemeSwitch() {
 
   // themeMode is AUTO (1) or UNSPECIFIED (0): show light, system, dark options
   return (
-    <div className={`flex space-x-1 p-1 ${toggleRoundness} ${cardAppearance}`}>
+    <div className={`mdl-theme-switch flex space-x-1 p-1 ${toggleRoundness} ${cardAppearance}`}>
       <button
-        className={`flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "light")}`}
+        className={`mdl-theme-switch__button flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "light")}`}
         onClick={() => setTheme("light")}
         aria-label="Switch to light mode"
       >
         <SunIcon className="h-5 w-5" />
       </button>
       <button
-        className={`flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "system")}`}
+        className={`mdl-theme-switch__button flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "system")}`}
         onClick={() => setTheme("system")}
         aria-label="Switch to system mode"
       >
         <ComputerDesktopIcon className="h-4 w-4" />
       </button>
       <button
-        className={`flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "dark")}`}
+        className={`mdl-theme-switch__button flex h-8 w-8 flex-row items-center justify-center ${toggleRoundness} transition-colors ${getSelectedButtonStyle(theme === "dark")}`}
         onClick={() => setTheme("dark")}
         aria-label="Switch to dark mode"
       >
