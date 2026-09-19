@@ -13,10 +13,10 @@ export const methods = [AuthenticationMethod.Passkey, AuthenticationMethod.Passw
 export function AuthenticationMethodRadio({
   selected,
   selectionChanged,
-}: {
+}: Readonly<{
   selected: any;
   selectionChanged: (value: any) => void;
-}) {
+}>) {
   return (
     <div className="w-full">
       <div className="mx-auto w-full max-w-md">
@@ -33,7 +33,7 @@ export function AuthenticationMethodRadio({
                     checked
                       ? "bg-background-light-400 ring-primary-light-500 dark:bg-background-dark-400 dark:ring-primary-dark-500 ring-2"
                       : "bg-background-light-400 dark:bg-background-dark-400"
-                  } boder-divider-light dark:border-divider-dark relative flex h-full flex-1 cursor-pointer rounded-lg border px-5 py-4 hover:shadow-lg focus:outline-none dark:hover:bg-white/10`
+                  } mdl-choice-card border-divider-light dark:border-divider-dark relative flex h-full flex-1 cursor-pointer rounded-lg border px-5 py-4 hover:shadow-lg focus:outline-none dark:hover:bg-white/10`
                 }
               >
                 <div className="flex w-full flex-col items-center text-sm">

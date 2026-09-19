@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="834" height="1370" viewBox="0 0 834 1370" role="img" aria-labelledby="title desc">
+  <title id="title">MyDermaLife MDL</title>
+  <desc id="desc">Monogramme vertical M D L dessiné avec les contours AngelicaC de la signature MyDermaLife.</desc>
+  <g fill="#A9512D" fill-rule="nonzero" data-source-family="AngelicaC">
+    <path data-letter="M" d="M234 597C212 641 181 660 154 660C122 660 95 633 95 592V0H120V532C120 541 123 548 127 548C131 548 136 544 141 533L404 0H427L693 536C695 541 702 548 707 548C711 548 714 544 714 533V0H826V581C826 630 801 659 770 659C744 659 713 639 690 592L465 140Z" transform="translate(-77 660) scale(1 -1)"/>
+    <path data-letter="D" d="M404 0C638 0 752 180 752 322C752 514 592 640 380 640H90V0ZM206 615H356C530 615 618 522 618 336C618 144 543 25 324 25H206Z" transform="translate(62 1010) scale(1 -1)"/>
+    <path data-letter="L" d="M631 25H249C222 25 210 56 210 83V640H94V75C94 42 107 0 141 0H631Z" transform="translate(121 1360) scale(1 -1)"/>
+  </g>
+</svg>

@@ -1,7 +1,18 @@
 {
   "common": {
     "back": "Retour",
-    "title": "Connexion avec Zitadel"
+    "title": "MyDermaLife"
+  },
+  "mydermalifeShell": {
+    "brandHome": "Revenir à MyDermaLife",
+    "secureSpace": "Espace MyDermaLife sécurisé",
+    "editorialTitle": "Votre espace. Votre soin, dans la continuité.",
+    "editorialDescription": "Une entrée confidentielle vers votre parcours de soin et les équipes qui vous accompagnent.",
+    "evidence": "Votre méthode de connexion suit la politique de sécurité de cet espace.",
+    "privacyPromise": "Une connexion confidentielle, sans perdre le contexte de votre parcours.",
+    "footerNavigation": "Confidentialité et assistance",
+    "privacy": "Confidentialité",
+    "help": "Aide"
   },
   "accounts": {
     "title": "Comptes",

@@ -59,21 +59,25 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     const actualRoundness = roundness || getDefaultInputRoundness();
 
     return (
-      <label className="text-12px text-input-light-label dark:text-input-dark-label relative flex flex-col">
+      <label
+        className="mdl-field text-12px text-input-light-label dark:text-input-dark-label relative flex flex-col"
+        data-invalid={error ? "true" : undefined}
+      >
         <span className={`mb-1 leading-3 ${error ? "text-warn-light-500 dark:text-warn-dark-500" : ""}`}>
           {label} {required && "*"}
         </span>
         <input
           suppressHydrationWarning
           ref={ref}
-          className={styles(!!error, !!disabled, actualRoundness)}
+          className={`mdl-field__control ${styles(!!error, !!disabled, actualRoundness)}`}
           defaultValue={defaultValue}
+          aria-invalid={error ? true : undefined}
           required={required}
           disabled={disabled}
           placeholder={placeholder}
           autoComplete={props.autoComplete ?? "off"}
-          onChange={(e) => onChange && onChange(e)}
-          onBlur={(e) => onBlur && onBlur(e)}
+          onChange={(e) => onChange?.(e)}
+          onBlur={(e) => onBlur?.(e)}
           {...props}
         />
 
@@ -90,7 +94,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         )}
 
         <div className="leading-14.5px h-14.5px text-12px text-warn-light-500 dark:text-warn-dark-500 flex flex-row items-center">
-          <span>{error ? error : " "}</span>
+          <span>{error ?? " "}</span>
         </div>
 
         {success && (
