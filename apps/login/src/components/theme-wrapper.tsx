@@ -1,6 +1,7 @@
 "use client";
 
 import { setTheme } from "@/helpers/colors";
+import { resolveMyDermaLifeTheme } from "@/lib/mydermalife-theme";
 import { BrandingSettings, ThemeMode } from "@zitadel/proto/zitadel/settings/v2/branding_settings_pb";
 import { useTheme } from "next-themes";
 import { ReactNode, useEffect, useLayoutEffect } from "react";
@@ -83,40 +84,17 @@ export const ThemeWrapper = ({ children, branding }: Props) => {
     setThemeMode(branding?.themeMode ?? ThemeMode.UNSPECIFIED);
   }, [branding?.themeMode]);
 
-  // Handle branding themeMode to force specific theme.
-  // Uses useLayoutEffect to apply before paint and writes the forced value
-  // to localStorage so next-themes doesn't fall back to system default.
+  // MyDermaLife is light by default. Only an explicit organization DARK mode
+  // may override it; AUTO must not silently inherit the device theme.
   useLayoutEffect(() => {
-    if (branding?.themeMode !== undefined) {
-      switch (branding.themeMode) {
-        case ThemeMode.LIGHT:
-          document.documentElement.classList.remove("dark");
-          try {
-            localStorage.setItem("cp-theme", "light");
-          } catch {
-            /* localStorage unavailable (e.g. private mode) */
-          }
-          setNextTheme("light");
-          break;
-        case ThemeMode.DARK:
-          document.documentElement.classList.add("dark");
-          try {
-            localStorage.setItem("cp-theme", "dark");
-          } catch {
-            /* localStorage unavailable (e.g. private mode) */
-          }
-          setNextTheme("dark");
-          break;
-        case ThemeMode.AUTO:
-          setNextTheme("system");
-          break;
-        case ThemeMode.UNSPECIFIED:
-        default:
-          document.documentElement.classList.remove("dark");
-          setNextTheme("light");
-          break;
-      }
+    const theme = resolveMyDermaLifeTheme(branding?.themeMode);
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    try {
+      localStorage.setItem("cp-theme", theme);
+    } catch {
+      /* localStorage unavailable (e.g. private mode) */
     }
+    setNextTheme(theme);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [branding?.themeMode]);
 
